@@ -13,12 +13,131 @@
     <header class="header">
         <div class="contaner">
             <div class="header__container">
-                <img src="" alt="" class="header__logo">
+                <img src="img/header/apple.svg" alt="Логотип компании Яблоко" class="header__logo">
+
+                <nav class="header__navigation navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a href="#" class="navigation__link">Оформить предзаказ</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Доставка</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Официальный сайт Apple</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
 
-    <main class="main"></main>
+    <main class="main">
+        <section class="main__section offer">
+            <div class="container">
+                <div class="offer__container">
+                    <h1 class="offer__main-title">iPhone 13</h1>
+
+                    <h2 class="offer__title">Ближе, чем можно представить.</h2>
+
+                    <p class="offer__price">от 79 000 руб.</p>
+
+                    <button class="offer__btn btn">Оформить предзаказ</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="main__section features">
+            <div class="container">
+                <h2 class="features__title">iPhone 13. Ничего лишнего</h2>
+
+                <ul class="features__list">
+                    <li class="features__item card"></li>
+                        <img src="img/features/camera.jpg" alt="новый модуль камер" class="card__picture">
+                        
+                        <h3 class="card__title">Камера</h3>
+
+                        <p class="card__description">Система камер PRO.</p>
+                    <li class="features__item card"></li>
+
+                    <li class="features__item card"></li>
+
+                    <li class="features__item card"></li>
+
+                    <li class="features__item card"></li>
+
+                    <li class="features__item card"></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="main__section order">
+            <div class="container">
+                <h2 class="order__title">Оформить предзаказ</h2>
+
+                <form action="#" class="order__form form">
+                    <fieldset class="form__box">
+                        <legend class="form__title-box">Персональные данные</legend>
+
+                        <label for="fullName" class="form__label">ФИО</label>
+                        <input type="text" class="form__input" id="fullName" name="fullName">
+
+                        <label for="phone" class="form__label">Телефон</label>
+                        <input type="text" class="form__input" id="phone" name="phone">
+
+                        <label for="email" class="form__label">E-mail</label>
+                        <input type="email" class="form__input" id="email" name="email">
+                    </fieldset>
+
+                    <fieldset class="form__box">
+                        <legend class="form__title-box">Адрес доставки</legend>
+                    </fieldset>
+
+                    <fieldset class="form__box">
+                        <legend class="form__title-box">Выбор модели</legend>
+
+                        <label for="model" class="form__label">Модель</label>
+                        <select name="model" id="model" class="form__select">
+                            <option value="iPhone13">iPhone 13</option>
+                            <option value="iPhone13mini">iPhone 13 mini</option>
+                            <option value="iPhone13Pro">iPhone 13 Pro</option>
+                            <option value="iPhone13ProMax">iPhone 13 Pro Max</option>
+                        </select>      
+
+                        <label for="color" class="form__label">Цвет</label>
+                        <select name="color" id="color" class="form__select">
+                            <option value="Pearl">Pearl</option>
+                            <option value="Graphite">Graphite</option>
+                            <option value="Sunset Gold">Sunset Gold</option>
+                            <option value="Pink">Pink</option>
+                            <option value="Violet">Violet</option>
+                            <option value="Orange">Orange</option>
+                            <option value="Product Red">Product Red</option>
+                            <option value="Yellow">Yellow</option>
+                            <option value="Mint">Mint</option>
+                            <option value="Navi Blue">Navi Blue</option>
+                        </select>                      
+                    </fieldset>
+
+                    <fieldset class="form__box">
+                        <legend class="form__title-box">Аксессуары</legend>
+
+                        <label for="" class="form__label checkbox">
+                            <input type="checkbox" name="accessories" id="case">Чехол
+                        </label>
+
+                        <label for="" class="form__label checkbox">
+                            <input type="checkbox" name="accessories" id="AirPods">Наушники AirPods 3
+                        </label>
+
+                        <label for="" class="form__label checkbox">
+                            <input type="checkbox" name="accessories" id="glass">Защитное стекло
+                        </label>
+
+                        <label for="" class="form__label checkbox">
+                            <input type="checkbox" name="accessories" id="MagSafe">Зарядное устройство MagSafe
+                        </label>
+                    </fieldset>
+
+                    <button type="submit" class="form__submit btn">Оформить</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer"></footer>
 </body>
