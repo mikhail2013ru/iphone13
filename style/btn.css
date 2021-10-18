@@ -1,0 +1,15 @@
+.btn {
+    cursor: pointer;
+    padding: 18px 23px;
+    background-color: var(--color-btn);
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    color: var(--color-primary);
+}
+
+@media (max-width: 480px) {
+    .btn {
+        font-size: 18px;
+    }
+}
