@@ -4,10 +4,17 @@
     background-image: url('../img/offer/phones.jpg');
     background-repeat: no-repeat;
     background-position: bottom;
+    background-size: 1290px;
     min-height: 820px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media (min-resolution: 2dppx) {
+    .offer__container {
+        background-image: url('../img/offer/retina/phones-2x.jpg');
+    }
 }
 
 .offer__main-title {
@@ -33,8 +40,15 @@
 
 @media (max-width: 800px) {
     .offer__container {
+        background-image: url('../img/offer/retina/phones-800.jpg');
         min-height: 720px;
         background-size: 960px;
+    }
+
+    @media (min-resolution: 2dppx) {
+        .offer__container {
+            background-image: url('../img/offer/retina/phones-800-2x.jpg');
+        }
     }
 
     .offer__main-title {
@@ -47,5 +61,18 @@
 
     .offer__price {
         font-size: 18px;
+    }
+}
+
+@media (max-width: 440px) {
+    .offer__container {
+        background-image: url('../img/offer/retina/phones-mob.jpg');
+        background-size: 400px;
+    }
+
+    @media (min-resolution: 2dppx) {
+        .offer__container {
+            background-image: url('../img/offer/retina/phones-mob-2x.jpg');
+        }
     }
 }
