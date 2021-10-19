@@ -48,8 +48,7 @@ h3,
 ul,
 p,
 figure,
-fieldset,
-figcaption {
+fieldset {
     margin: 0;
 }
 
