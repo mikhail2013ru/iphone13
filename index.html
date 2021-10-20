@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iPhone 13</title>
+
+    <link rel="icon" href="img/header/apple.svg">
+
+    <link rel="preload" href="fonts/SFUIText-Light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/SFUIText-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/SFUIText-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/fonts.css">
     <link rel="stylesheet" href="style/style.css">
@@ -65,7 +72,17 @@
                     </li>
 
                     <li class="features__item card">
-                        <img src="img/features/compect.jpg" alt="компактная комплектация" class="card__picture">
+                        <picture>
+                            <source type="image/avif" 
+                                srcset="img/features/avif/compect.avif 1x, img/features/avif/compect-2x.avif 2x">
+                            <source type="image/webp" 
+                                srcset="img/features/webp/compect.webp 1x, img/features/webp/compect-2x.webp 2x">
+                            
+                            <img src="img/features/compect.jpg"
+                                srcset="img/features/retina/compect-2x.jpg 2x"
+                                alt="компактная комплектация" 
+                                class="card__picture">
+                        </picture>
                             
                         <h3 class="card__title">Комплектация</h3>
 
@@ -74,7 +91,17 @@
                     </li>
 
                     <li class="features__item card">
-                        <img src="img/features/color.jpg" alt="новый цвет" class="card__picture">
+                        <picture>
+                            <source type="image/avif" 
+                                srcset="img/features/avif/color.avif 1x, img/features/avif/color-2x.avif 2x">
+                            <source type="image/webp" 
+                                srcset="img/features/webp/color.webp 1x, img/features/webp/color-2x.webp 2x">
+                            
+                            <img src="img/features/color.jpg"
+                                srcset="img/features/retina/color-2x.jpg 2x"
+                                alt="новый цвет" 
+                                class="card__picture">
+                        </picture>
                             
                         <h3 class="card__title">Цвет</h3>
 
@@ -83,7 +110,17 @@
                     </li>
 
                     <li class="features__item card">
-                        <img src="img/features/frame.jpg" alt="Водонипроницаемый корпус" class="card__picture">
+                        <picture>
+                            <source type="image/avif" 
+                                srcset="img/features/avif/frame.avif 1x, img/features/avif/frame-2x.avif 2x">
+                            <source type="image/webp" 
+                                srcset="img/features/webp/frame.webp 1x, img/features/webp/frame-2x.webp 2x">
+                            
+                            <img src="img/features/frame.jpg"
+                                srcset="img/features/retina/frame-2x.jpg 2x"
+                                alt="Водонипроницаемый корпус" 
+                                class="card__picture">
+                        </picture>
                             
                         <h3 class="card__title">Корпус</h3>
 
@@ -91,7 +128,17 @@
                     </li>
 
                     <li class="features__item card">
-                        <img src="img/features/line.jpg" alt="Обновлённая линейка стартфонов" class="card__picture">
+                        <picture>
+                            <source type="image/avif" 
+                                srcset="img/features/avif/line.avif 1x, img/features/avif/line-2x.avif 2x">
+                            <source type="image/webp" 
+                                srcset="img/features/webp/line.webp 1x, img/features/webp/line-2x.webp 2x">
+                            
+                            <img src="img/features/line.jpg"
+                                srcset="img/features/retina/line-2x.jpg 2x"
+                                alt="Обновлённая линейка стартфонов" 
+                                class="card__picture">
+                        </picture>
                             
                         <h3 class="card__title">Линейка</h3>
 
@@ -100,7 +147,17 @@
                     </li>
 
                     <li class="features__item card">
-                        <img src="img/features/charger_magnetic.jpg" alt="Беспроводная зарядка" class="card__picture">
+                        <picture>
+                            <source type="image/avif" 
+                                srcset="img/features/avif/charger_magnetic.avif 1x, img/features/avif/charger_magnetic-2x.avif 2x">
+                            <source type="image/webp" 
+                                srcset="img/features/webp/charger_magnetic.webp 1x, img/features/webp/charger_magnetic-2x.webp 2x">
+                            
+                            <img src="img/features/charger_magnetic.jpg"
+                                srcset="img/features/retina/charger_magnetic-2x.jpg 2x"
+                                alt="Беспроводная зарядка" 
+                                class="card__picture">
+                        </picture>
                             
                         <h3 class="card__title">Зарядка</h3>
 
@@ -114,7 +171,7 @@
             <div class="container">
                 <h2 class="order__title">Оформить предзаказ</h2>
 
-                <form action="#" class="order__form form">
+                <form action="#" class="order__form form" id="form-order">
                     <fieldset class="form__box">
                         <legend class="form__title-box">Персональные данные</legend>
 
@@ -171,24 +228,26 @@
                         <legend class="form__title-box">Аксессуары</legend>
 
                         <label for="" class="form__label checkbox">
-                            <input type="checkbox" name="accessories" id="case">Чехол
+                            <input class="checkbox__input" type="checkbox" name="accessories" id="case">Чехол
                         </label>
 
                         <label for="" class="form__label checkbox">
-                            <input type="checkbox" name="accessories" id="AirPods">Наушники AirPods 3
+                            <input class="checkbox__input" type="checkbox" name="accessories" id="AirPods">Наушники AirPods 3
                         </label>
 
                         <label for="" class="form__label checkbox">
-                            <input type="checkbox" name="accessories" id="glass">Защитное стекло
+                            <input class="checkbox__input" type="checkbox" name="accessories" id="glass">Защитное стекло
                         </label>
 
                         <label for="" class="form__label checkbox">
-                            <input type="checkbox" name="accessories" id="MagSafe">Зарядное устройство MagSafe
+                            <input class="checkbox__input" type="checkbox" name="accessories" id="MagSafe">Зарядное устройство MagSafe
                         </label>
+
                     </fieldset>
-
-                    <button type="submit" class="form__submit btn">Оформить</button>
                 </form>
+
+                <button type="submit" class="form__submit btn" form="form-order">Оформить</button>
+
             </div>
         </section>
     </main>
@@ -205,5 +264,7 @@
             </p>
         </div>
     </footer>
+
+    <script src="js/script.js" defer></script>
 </body>
 </html>
