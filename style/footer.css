@@ -21,13 +21,49 @@
 
 .contacts {
     line-height: 20px;
+    text-align: right;
 }
 
 .contacts__design {
     margin-bottom: 13px;
 }
 
-.contacts__email {
-    display: block;
-    text-align: right;
+@media (max-width: 1108px) {
+    .footer__column {
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 890px) {
+    .footer__column {
+        padding: 0 60px;
+    }
+}
+
+@media (max-width: 730px) {
+    .footer__column {
+        padding: 0 25px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer__column {
+        padding: 0;
+        font-size: 16px;
+    }
+
+    .footer__flex {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .contacts {
+        text-align: center;
+    }
+
+    .footer__copyright {
+        display: block;
+        margin-bottom: 10px;
+    }
 }
