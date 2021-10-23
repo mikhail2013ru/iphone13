@@ -1,13 +1,25 @@
-const checkbox = document.querySelectorAll('.checkbox__input');
-const formLabel = document.querySelectorAll('.form__label');
+new Choices('#model', {
+    searchEnabled: false,
+    itemSelectText: ''
+});
 
-// checkbox.addEventListener('click', () => {
-//     console.log('sosi');
-// });
+new Choices('#color', {
+    searchEnabled: false,
+    itemSelectText: ''
+});
 
-// checkbox.forEach(function(item, i) {    
-//     formLabel.forEach(function(elem, e) {
-//         elem.addEventListener('click', (e) => {
-//         console.log(e);
-//     });
-// });
+$('#form-order').on('submit', function(event) {
+    event.preventDefault();
+
+    $.ajax({
+        url: 'https://jsonplaceholder.typicode.com/posts',
+        method: 'POST',
+        dataType: 'html',
+        data: $('#form-order').serialize(),
+        success: function(data) {
+            console.log(data);
+            $('#form-order').html('Спасибо, ваша заявка успешно отправлена!');
+            $('.form__submit').hide();
+        }
+    })
+})

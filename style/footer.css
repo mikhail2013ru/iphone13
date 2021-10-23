@@ -1,0 +1,32 @@
+.footer__flex {
+    background-color: var(--color-second);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.footer__column {
+    color: var(--color-primary);
+    font-size: 20px;
+    font-weight: 400;
+    padding-left: 155px;
+    padding-right: 155px;
+}
+
+.footer__copyright {
+    line-height: 16px;
+}
+
+.contacts {
+    line-height: 20px;
+}
+
+.contacts__design {
+    margin-bottom: 13px;
+}
+
+.contacts__email {
+    display: block;
+    text-align: right;
+}
