@@ -1,0 +1,12 @@
+.delivery {
+    min-height: calc(100vh - 213px);
+}
+
+.delivery__title {
+    margin-bottom: 50px;
+}
+
+.delivery__description {
+    text-align: center;
+    font-style: italic;
+}

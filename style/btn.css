@@ -6,6 +6,11 @@
     border: none;
     outline: none;
     color: var(--color-primary);
+    transition: background-color 0.5s;
+}
+
+.btn:hover {
+    background-color: #0071e3d3;
 }
 
 @media (max-width: 480px) {

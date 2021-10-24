@@ -33,3 +33,27 @@ btn.addEventListener('click', () => {
         block: 'start'
       })
 });
+
+const attribute = document.querySelector('[data-link]');
+
+attribute.addEventListener('click', (elem) => {
+    elem.preventDefault();
+    anchor.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+});
+
+// const attributes = document.querySelectorAll('[data-link]');
+
+// attributes.forEach(function(item) {
+
+//     item.addEventListener('click', (el) => {
+//         el.preventDefault();
+//         anchor.scrollIntoView({
+//             behavior: 'smooth',
+//             block: 'start'
+//           })
+//     });
+// });
+
